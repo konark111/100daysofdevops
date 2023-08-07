@@ -71,7 +71,7 @@ pipeline {
                     if(apply){
                         dir('jenkins-terraform-pipeline/ec2_pipeline/'){
                             unstash "terraform-plan"
-                            sh 'sudo terraform apply terraform.tfplan' 
+                            sh 'terraform apply terraform.tfplan -lock=false' 
                         }
                     }
                 }
