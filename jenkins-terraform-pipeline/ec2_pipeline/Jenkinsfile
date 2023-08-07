@@ -71,7 +71,7 @@ pipeline {
                     if(apply){
                         dir('jenkins-terraform-pipeline/ec2_pipeline/'){
                             // unstash "terraform-plan"
-                            sh 'terraform apply' 
+                            sh 'terraform apply -auto-approve' 
                         }
                     }
                 }
