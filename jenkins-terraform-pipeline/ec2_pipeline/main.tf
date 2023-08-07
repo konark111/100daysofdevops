@@ -4,7 +4,7 @@ provider "aws" {
   access_key = var.access_key
 }
 
-resource "aws_instance" "example" {
+resource "aws_instance" "ec2" {
   ami           = "ami-0261755bbcb8c4a84"
   instance_type = "t2.micro"
 }
